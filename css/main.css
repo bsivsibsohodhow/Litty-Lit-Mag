@@ -759,6 +759,7 @@ button[disabled]:hover {
 
 .navbar {
   display: inline-block;
+  width: 100vw;
   height: 28px;
   background-color: #edf0f2;
 }
