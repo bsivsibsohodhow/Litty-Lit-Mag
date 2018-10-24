@@ -754,7 +754,7 @@ button[disabled]:hover {
 }
 
 .whitespace {
-  display: none;
+  visibility: hidden;
 }
 
 
