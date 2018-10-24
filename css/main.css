@@ -774,9 +774,8 @@ button[disabled]:hover {
 }
 
 .grid-box {
-  display: inline-block;
-  height: 98px;
-  border-width: 2px;
+  height: 240px;
+  border-width: 1px;
   border-color: #474747;
 }
 
