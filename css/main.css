@@ -753,6 +753,10 @@ button[disabled]:hover {
   height: 100vh;
 }
 
+.whitespace {
+  display: none;
+}
+
 
 @media screen and (max-width: 480px) {
     .hide-phone {
