@@ -777,6 +777,7 @@ button[disabled]:hover {
   display: inline-block;
   height: 98px;
   border-width: 2px;
+  border-color: #474747;
 }
 
 
