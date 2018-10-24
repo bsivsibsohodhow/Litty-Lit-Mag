@@ -757,6 +757,18 @@ button[disabled]:hover {
   visibility: hidden;
 }
 
+.navbar {
+  display: inline-block;
+  height: 28px;
+  background-color: #edf0f2;
+}
+
+.grid-box {
+  display: inline-block;
+  height: 98px;
+  border-width: 2px;
+}
+
 
 @media screen and (max-width: 480px) {
     .hide-phone {
