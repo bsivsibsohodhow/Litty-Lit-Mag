@@ -69,11 +69,11 @@ h6 {
   font-size: 0.85em;
 }
 a {
-  color: var(--color-primary);
+  color: #a8a8a8;
   text-decoration: none;
 }
 a:hover:not(.button) {
-  opacity: 0.75;
+  color: #474747;
 }
 p {
   margin-top: 0;
