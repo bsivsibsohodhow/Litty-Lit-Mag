@@ -747,6 +747,12 @@ button[disabled]:hover {
 .is-hidden {
     display: none !important;
 }
+
+.index-container {
+  background-color: #f4d5cd;
+}
+
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
@@ -757,3 +763,5 @@ button[disabled]:hover {
         display: none !important;
     }
 }
+
+
