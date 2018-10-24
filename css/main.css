@@ -764,6 +764,12 @@ button[disabled]:hover {
   background-color: #edf0f2;
 }
 
+.navbar p {
+  font-family: "Futura";
+  font-size: 16px;
+  color: #474747;
+}
+
 .grid-box {
   display: inline-block;
   height: 98px;
