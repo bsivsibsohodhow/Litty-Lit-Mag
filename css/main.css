@@ -50,6 +50,8 @@ h-t {
   font-size: 2em;
   font-family: "Futura";
   text-align: center;
+  width: 100%;
+  display: inline-block;
 }
 h2 {
   font-size: 1.75em;
