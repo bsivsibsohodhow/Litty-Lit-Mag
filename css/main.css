@@ -71,6 +71,11 @@ a:hover:not(.button) {
 p {
   margin-top: 0;
 }
+p-t {
+  font-family: "Futura";
+  font-size: 16px;
+  text-align: center;
+}
 blockquote {
   background-color: #f3f3f6;
   padding: 1.5rem 2rem;
