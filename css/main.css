@@ -768,6 +768,7 @@ button[disabled]:hover {
   font-family: "Futura";
   font-size: 16px;
   color: #474747;
+  text-align: center;
 }
 
 .grid-box {
