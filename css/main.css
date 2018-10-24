@@ -763,6 +763,7 @@ button[disabled]:hover {
   width: 100vw;
   height: 28px;
   background-color: #edf0f2;
+  text-align: center;
 }
 
 .navbar p {
