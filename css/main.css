@@ -69,11 +69,12 @@ h6 {
   font-size: 0.85em;
 }
 a {
-  color: #a8a8a8;
+  color: #878787;
   text-decoration: none;
+  font-family: "Futura";
 }
 a:hover:not(.button) {
-  color: #474747;
+  color: #232323;
 }
 p {
   margin-top: 0;
