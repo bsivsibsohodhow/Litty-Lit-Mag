@@ -777,6 +777,7 @@ button[disabled]:hover {
   height: 240px;
   border-width: 1px;
   border-color: #474747;
+  border: solid;
 }
 
 
