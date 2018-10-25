@@ -794,6 +794,13 @@ h-w2 {
   font-size: 64px;
 }
 
+.more-button {
+  text-align: center;
+  display: inline-block;
+  color: #474747;
+  border: 2px;
+}
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
