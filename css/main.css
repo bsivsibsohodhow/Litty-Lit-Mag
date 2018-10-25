@@ -796,9 +796,12 @@ h-w2 {
 
 .more-button {
   text-align: center;
-  display: inline-block;
+  display: block;
+  border: solid 4px;
+}
+
+.more-button a {
   color: #474747;
-  border: 2px;
 }
 
 @media screen and (max-width: 480px) {
