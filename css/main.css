@@ -817,7 +817,7 @@ h-we {
 }
 
 .more-button a:focus {
-  background-color: #474747;
+ /* background-color: #474747; */
 }
 
 @media screen and (max-width: 480px) {
