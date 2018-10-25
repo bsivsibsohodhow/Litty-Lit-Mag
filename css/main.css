@@ -812,6 +812,14 @@ h-we {
   padding-bottom: 16px;
 }
 
+.more-button a:hover {
+  background-color: #edf0f2;
+}
+
+.more-button a:focus {
+  background-color: #474747;
+}
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
