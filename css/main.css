@@ -784,9 +784,14 @@ button[disabled]:hover {
   border: solid;
 }
 
-h-w2 {
+h-w1 {
   font-family: "Futura";
   font-size: 16px;
+}
+
+h-w2 {
+  font-family: "Futura";
+  font-size: 64px;
 }
 
 @media screen and (max-width: 480px) {
