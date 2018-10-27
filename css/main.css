@@ -452,6 +452,9 @@ button[disabled]:hover {
 .button.icon-only {
   padding: 1rem;
 }
+:focus {
+  outline: 0;
+}
 ::-webkit-input-placeholder {
   color: #bdbfc4;
 }
