@@ -82,6 +82,8 @@ a:hover:not(.button) {
 }
 p {
   margin-top: 0;
+  font-family: "Futura";
+  font-size: 16px;
 }
 p-t {
   font-family: "Futura";
