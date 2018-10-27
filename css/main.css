@@ -823,6 +823,14 @@ h-we {
  /* background-color: #474747; */
 }
 
+.button {
+  cursor: pointer !important;
+}
+
+.button:focus {
+  outline: 0 !important;
+}
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
