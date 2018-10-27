@@ -378,6 +378,7 @@ button {
 [type="submit"]:hover,
 button:hover {
   opacity: 0.8;
+  background-color: #edf0f2;
 }
 .button:active,
 [type="button"]:active,
