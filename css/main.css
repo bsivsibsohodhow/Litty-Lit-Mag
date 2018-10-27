@@ -377,8 +377,8 @@ button {
 [type="reset"]:hover,
 [type="submit"]:hover,
 button:hover {
-  opacity: 0.8;
-  background-color: #edf0f2;
+  color: #474747 !important;
+  background-color: #edf0f2 !important;
 }
 .button:active,
 [type="button"]:active,
