@@ -761,7 +761,7 @@ button[disabled]:hover {
 }
 
 .index-container {
-  background-color: #f4d5cd;
+  background: url(img/background.png) no-repeat center center fixed;
   height: 100%;
 }
 
