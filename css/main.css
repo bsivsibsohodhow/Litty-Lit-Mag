@@ -807,6 +807,11 @@ h-we {
   font-size: 128px;
 }
 
+h-ws {
+  font-size: 24px;
+  font-family: "Futura";
+}
+
 .more-button {
   text-align: center;
   display: block;
