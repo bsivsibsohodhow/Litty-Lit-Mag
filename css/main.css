@@ -58,6 +58,11 @@ h2 {
   font-family: "Futura";
   font-size: 24px;
 }
+h2-s {
+  font-family: "Futura";
+  font-size: 24px;
+  color: #474747;
+}
 h3 {
   font-size: 1.5em;
 }
