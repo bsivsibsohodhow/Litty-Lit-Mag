@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png" />
     <reader v-bind:flowers="stuffInfo"></reader>
   </div>
 </template>
