@@ -3,9 +3,7 @@ import App from './App';
 
 new Vue({
   el: '#app',
-  components: { 
-    'App': httpVueLoader('App.vue') 
-  },
+  components: { App },
   template: '<App/>'
 });
 
