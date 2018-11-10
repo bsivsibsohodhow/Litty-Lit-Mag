@@ -3,7 +3,7 @@
 new Vue({
   el: '#app',
   components: { 
-    'App': httpVueLoader('App.vue') 
+    'App': httpVueLoader('scr/App.vue') 
   },
   template: '<App/>'
 });
