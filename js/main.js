@@ -26,7 +26,7 @@ $(document).ready(function() {
       var linesSpace = lines[i].split(' ');
       var titleLength = linesSpace.length + 1;
       var linesSpaceNew = linesSpace.slice(1, titleLength).join(' ');
-      var clickTitle[i] = linesSpaceNew[i];
+      clickTitle[i] = linesSpaceNew[i];
    //   clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
       
       // update content in flower truck
