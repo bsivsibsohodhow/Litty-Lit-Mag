@@ -12,7 +12,7 @@ $(document).ready(function() {
     var lines = data.split('\n');
     for (i = 0; i < lines.length; i++) {
       clickTitle[i] = lines[i];
-      clickTitle[i] = clickTitle[i].replace(/\s\g, '');
+      clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
       $('#reader-container').append(template1 + path + clickTitle[i] + '.txt' + template2 + lines[i] + template3);
     }
   })
