@@ -24,8 +24,8 @@ $(document).ready(function() {
     for (var i = 0; i < lines.length; i++) {
       var linesComma = lines[i].split(',');
       var linesSpace = lines[i].split(' ');
-      var titleLength = linesSpace.length;
-      var linesSpaceNew = linesSpace.join(' ', 1, titleLength);
+      var titleLength = linesSpace.length + 1;
+      var linesSpaceNew = linesSpace.slice(1, titleLength).join(' ');
       var clickTitle[i] = linesSpaceNew[i];
    //   clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
       
