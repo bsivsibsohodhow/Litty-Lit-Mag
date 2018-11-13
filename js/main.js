@@ -21,10 +21,20 @@ $(document).ready(function() {
       
     }
     */     
-    for (i = 0; i < lines.length; i++) {
-      clickTitle[i] = lines[i];
-      clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
-      $('#reader-container').append(template1 + path + template2 + lines[i] + template3);
+    for (var i = 0; i < lines.length; i++) {
+      var linesComma = lines[i].split(',');
+      var linesSpace = lines[i].split(' ');
+      var titleLength = linesSpace.length;
+      var linesSpaceNew = linesSpace.join(' ', 1, titleLength);
+      var clickTitle[i] = linesSpaceNew[i];
+   //   clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
+      
+      // update content in flower truck
+      $.get('/issues/' + issue + '/' + linesComma[0] + '.txt', function(flowers) {
+        $('#flower-truck').innerHtml(flowers);
+      })
+      
+      $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
     }
   })
 })
