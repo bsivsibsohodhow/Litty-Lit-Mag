@@ -4,7 +4,7 @@ const template2 = '</p></div>';
 const issue = 'winter18';
 
 $(document).ready(function() {
-  $.get('/issues/' + issue + '.txt', function(data) {
+  $.get('/issues/' + issue + /' + issue + '.txt', function(data) {
     var lines = data.split('\n');
     for (i = 0; i < lines.length; i++) {
       $('#reader-container').append(template1 + lines[i] + template2);
