@@ -25,7 +25,7 @@ $(document).ready(function() {
       var linesComma = lines[i].split(',');
       var linesSpace = lines[i].split(' ');
       var titleLength = linesSpace.length + 1;
-      var linesSpaceNew = linesSpace.slice(2, titleLength).join('');
+      var linesSpaceNew = linesSpace.slice(2, titleLength).join(' ');
       clickTitle[i] = linesSpaceNew;
    //   clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
       
