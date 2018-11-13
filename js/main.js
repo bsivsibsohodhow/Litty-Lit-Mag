@@ -31,7 +31,7 @@ $(document).ready(function() {
       
       // update content in flower truck
       $.get('/issues/' + issue + '/' + linesComma[0] + '.txt', function(flowers) {
-        $('#flower-truck').innerHtml(flowers);
+        $('#flower-truck').innerHTML(flowers);
       })
       
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
