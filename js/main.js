@@ -36,7 +36,7 @@ $(document).ready(function() {
       
       var linesComma = [[], []];
       var linesCommaPre = lines[i].split(',');
-      linesCommaPre[1] = linesCommaPre[1].split('').pop();
+      linesCommaPre[1] = linesCommaPre[1].split(' ').pop();
       for (var ik = 0; ik < 2; ik++) {
         linesComma.push([i], linesCommaPre[ik]);
       }
