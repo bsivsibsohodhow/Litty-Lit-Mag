@@ -1,5 +1,5 @@
 const template1 = '<div class="col"><a href="';
-const template2 = '" onclick="growFlowers()">';
+const template2 = '">'; //add an onclick event here
 const template3 = '</a></div>';
 
 const issue = 'winter18';
