@@ -34,11 +34,12 @@ $(document).ready(function() {
     for (var i = 0; i < lines.length; i++) {
 //    var linesComma = lines[i].split(',');
       
-      var linesComma = [[], []];
+      var linesComma = [];
+      linesComma.push([23, 'Lorem Ipsum']);
       var linesCommaPre = lines[i].split(',');
       linesCommaPre[1] = linesCommaPre[1].split(' ').pop();
       for (var ik = 0; ik < 2; ik++) {
-        linesComma.push([i], linesCommaPre[ik]);
+        linesComma[i][ik] = [i, linesCommaPre[ik]];
       }
       var linesSpace = lines[i].split(' ');
       var titleLength = linesSpace.length + 1;
