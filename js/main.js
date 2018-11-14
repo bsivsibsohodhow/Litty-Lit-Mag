@@ -38,9 +38,10 @@ $(document).ready(function() {
       linesComma.push([23, 'Lorem Ipsum']);
       var linesCommaPre = lines[i].split(',');
       linesCommaPre[1] = linesCommaPre[1].split(' ').pop();
-      for (var ik = 0; ik < 2; ik++) {
+   /*   for (var ik = 0; ik < 2; ik++) {
         linesComma[i][ik] = [i, linesCommaPre[ik]];
       }
+   */
       var linesSpace = lines[i].split(' ');
       var titleLength = linesSpace.length + 1;
       var linesSpaceNew = linesSpace.slice(2, titleLength).join(' ');
@@ -52,6 +53,19 @@ $(document).ready(function() {
         $('#flower-truck').html(flowers);
       })
   */    
+      // fix it!! add more objects to this array. declare an empty one first, then push stuff into it 
+      var flowersPickup = {
+        floristLastName: linesSpace[0],
+        flower: clickTitle[i],
+        growFlower: function(flowerName) {
+          if (flowerName == flower) {
+            $.get('/issues/' + issue + '/' + floristLastName + '.txt', function(flowers) {
+              $('#flower-truck').html(flowers);
+            })
+          }
+        }
+      }
+  
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
     }
     
