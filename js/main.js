@@ -1,5 +1,5 @@
 const template1 = '<div class="col"><a href="';
-const template2 = '">';
+const template2 = '" onclick="growFlowers()">';
 const template3 = '</a></div>';
 
 const issue = 'winter18';
@@ -10,6 +10,16 @@ const htmlTemplate2 = '</title><meta name="description" content=""><meta name="v
 const htmlTemplate3 = '<div class="row"><div class="col-1"></div><div class="col"><p>';
 const htmlTemplate4 = '</p></div></div>';
 const htmlTemplate5 = '<!-- go back button for testing purpose! --> <div class="row"> <div class="col-4"></div> <div class="col-4"> <a href="index.html">secret go back button!</a> </div> <div class="col-4"></div> </div> </div> <script src="js/vendor/modernizr-3.6.0.min.js"></script> <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="js/plugins.js"></script> <script src="js/main.js"></script><!-- Google Analytics: change UA-XXXXX-Y to be your site"s ID. --> <script> window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date; ga("create", "xx-xxxxxxxxx-x", "auto"); ga("send", "pageview") </script> <script src="https://www.google-analytics.com/analytics.js" async defer></script> <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> </body></html>';
+
+function isStuffInTruck(array, item) {
+    for (var i = 0; i < array.length; i++) {
+        // This if statement depends on the format of your array
+        if (array[i][0] == item[0] && array[i][1] == item[1]) {
+            return true;   // Found it
+        }
+    }
+    return false;   // Not found
+}
 
 var clickTitle = new Array(23);
 
@@ -22,7 +32,14 @@ $(document).ready(function() {
     }
     */     
     for (var i = 0; i < lines.length; i++) {
-      var linesComma = lines[i].split(',');
+//    var linesComma = lines[i].split(',');
+      
+      var linesComma = [[], []];
+      var linesCommaPre = lines[i].split(',');
+      linesCommaPre[1] = linesCommaPre[1].split('').pop();
+      for (var ik = 0; ik < 2; ik++) {
+        linesComma.push([i], linesCommaPre[ik]);
+      }
       var linesSpace = lines[i].split(' ');
       var titleLength = linesSpace.length + 1;
       var linesSpaceNew = linesSpace.slice(2, titleLength).join(' ');
@@ -30,12 +47,22 @@ $(document).ready(function() {
    //   clickTitle[i] = clickTitle[i].replace(/\s+/g, '');
       
       // update content in flower truck
-      $.get('/issues/' + issue + '/' + linesComma[0] + '.txt', function(flowers) {
+  /*  $.get('/issues/' + issue + '/' + linesComma[0] + '.txt', function(flowers) {
         $('#flower-truck').html(flowers);
       })
-      
+  */    
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
     }
+    
+    /*
+    function growFlowers() {
+      var florist = 
+      $.get('/issues/' + issue + '/' + linesComma[whereIsMyFlower(florist), 0] + '.txt', function(flowers) {
+        $('#flower-truck').html(flowers);
+      })
+    }
+    */
+    
   })
 })
 
