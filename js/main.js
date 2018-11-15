@@ -86,7 +86,8 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-    $('a').click(function growFlowers() {
+    for (var ffi = 0; ffi < 23; ffi++) {
+      $('flower' + ffi + ' a').click(function growFlowers() {
           var knownFlower = $(this).text();
           for (var fi = 0; fi < 23; fi++) {
             if (clickTitle.indexOf(knownFlower) == fi) {
@@ -95,7 +96,8 @@ $(document).ready(function() {
               }) 
             }
           }
-  })
+    })
+  }
 })
 /*
 $(document).ready(function() {
