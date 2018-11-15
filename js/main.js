@@ -1,6 +1,6 @@
 const template1 = '<div class="col" id="flower';
 const template2 = '"><a href="';
-const template3 = '">
+const template3 = '">';
 const template4 = '</a></div>';
 
 const issue = 'winter18';
