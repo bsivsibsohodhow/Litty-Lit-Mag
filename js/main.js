@@ -1,6 +1,7 @@
-const template1 = '<div class="col"><a href="';
-const template2 = '" onclick="growFlowers()">'; //add an onclick event here
-const template3 = '</a></div>';
+const template1 = '<div class="col"><a id="flower';
+const template2 = '" href="';
+const template3 = '" onclick="growFlowers()">'; //add an onclick event here
+const template4 = '</a></div>';
 
 const issue = 'winter18';
 const path= '/issues/' + issue + '/' + issue + '.html';
@@ -68,7 +69,7 @@ $(document).ready(function() {
         }
       }
   */
-      $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
+      $('#reader-container').append(template1 + i + template2 + path + template3 + clickTitle[i] + template4);
     }
     
     /*
