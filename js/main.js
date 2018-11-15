@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     for (var ffi = 0; ffi < 23; ffi++) {
-      $('flower' + ffi + ' a').click(function growFlowers() {
+      $('#flower' + ffi + ' a').click(function growFlowers() {
           var knownFlower = $(this).text();
           for (var fi = 0; fi < 23; fi++) {
             if (clickTitle.indexOf(knownFlower) == fi) {
