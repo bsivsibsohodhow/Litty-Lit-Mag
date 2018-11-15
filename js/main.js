@@ -84,7 +84,24 @@ $(document).ready(function() {
   })
 })
 
+$(document).ready(function() {
+  for (var fi = 0; fi < 23; fi++) {
+    var selectedFlower = '#flower' + fi;
+    $('#reader-container').on('click', selectedFlower, function() {
+      var knownFlower = $(this).text();
+      for (var fii = 0; fii < 23; fii++) {
+        if (clickTitle.indexOf(knownFlower) == fii) {
+          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+            $('#flower-truck').html(flowers);
+          })
+        }
+      }
+    })
+  }
+})
 
+
+/*
 $(document).ready(function() {
     for (var ffi = 0; ffi < 23; ffi++) {
       $('#flower' + ffi + ' a').click(function growFlowers() {
@@ -99,6 +116,7 @@ $(document).ready(function() {
     })
   }
 })
+*/
 /*
 $(document).ready(function() {
   $.ajax({
