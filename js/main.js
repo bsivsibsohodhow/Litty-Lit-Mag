@@ -1,5 +1,5 @@
-const template1 = '<div class="col"><a id="flower';
-const template2 = '" href="';
+const template1 = '<div class="col" id="flower';
+const template2 = '"><a href="';
 const template3 = '" onclick="growFlowers()">'; //add an onclick event here
 const template4 = '</a></div>';
 
@@ -80,20 +80,23 @@ $(document).ready(function() {
       })
     }
     */
-    
-    $('a').click(function growFlowers() {
-      var knownFlower = $(this).text();
-      for (var fi = 0; fi < 23; fi++) {
-        if (clickTitle.indexOf(knownFlower) == fi) {
-          $.get('/issues/' + issue + '/' + florist[fi] + '.txt', function(flowers) {
-            $('#flower-truck').html(flowers);
-          }) 
-        }
-      }
-    })
+   
   })
 })
 
+
+$(document).ready(function() {
+    $('a').click(function growFlowers() {
+          var knownFlower = $(this).text();
+          for (var fi = 0; fi < 23; fi++) {
+            if (clickTitle.indexOf(knownFlower) == fi) {
+              $.get('/issues/' + issue + '/' + florist[fi] + '.txt', function(flowers) {
+                $('#flower-truck').html(flowers);
+              }) 
+            }
+          }
+  })
+})
 /*
 $(document).ready(function() {
   $.ajax({
