@@ -81,16 +81,16 @@ $(document).ready(function() {
     }
     */
     
-    function growFlowers() {
+    $('a').click(function growFlowers() {
       var knownFlower = $(this).text();
       for (var fi = 0; fi < 23; fi++) {
         if (clickTitle.indexOf(knownFlower) == fi) {
-          $.get('/issues/' + issue + '/' + florist[i] + '.txt', function(flowers) {
+          $.get('/issues/' + issue + '/' + florist[fi] + '.txt', function(flowers) {
             $('#flower-truck').html(flowers);
           }) 
         }
       }
-    }
+    })
   })
 })
 
