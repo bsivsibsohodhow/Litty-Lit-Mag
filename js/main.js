@@ -22,6 +22,7 @@ function isStuffInTruck(array, item) {
 }
 
 var clickTitle = new Array(23);
+var florist = new Array(23);
 
 $(document).ready(function() {
   $.get('/issues/' + issue + '/' + issue + '.txt', function(data) {
@@ -43,6 +44,7 @@ $(document).ready(function() {
       }
    */
       var linesSpace = lines[i].split(' ');
+      florist[i] = linesCommaPre[0];
       var titleLength = linesSpace.length + 1;
       var linesSpaceNew = linesSpace.slice(2, titleLength).join(' ');
       clickTitle[i] = linesSpaceNew;
@@ -54,7 +56,7 @@ $(document).ready(function() {
       })
   */    
       // fix it!! add more objects to this array. declare an empty one first, then push stuff into it 
-      var flowersPickup = {
+ /*   var flowersPickup = {
         floristLastName: linesSpace[0],
         flower: clickTitle[i],
         growFlower: function(flowerName) {
@@ -65,7 +67,7 @@ $(document).ready(function() {
           }
         }
       }
-  
+  */
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
     }
     
