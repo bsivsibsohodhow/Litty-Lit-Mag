@@ -1,7 +1,13 @@
+/*
 const template1 = '<div class="col" id="flower';
 const template2 = '"><a href="';
 const template3 = '">';
 const template4 = '</a></div>';
+*/
+
+const template1 = '<div class="col"><div class="generated-flower"><a href="';
+const template2 = '">';
+const template3 = '</a></div></div>';
 
 const issue = 'winter18';
 const path= '/issues/' + issue + '/' + issue + '.html';
@@ -69,7 +75,11 @@ $(document).ready(function() {
         }
       }
   */
+      /*  
       $('#reader-container').append(template1 + i + template2 + path + template3 + clickTitle[i] + template4);
+      */
+        
+      $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
     }
     
     /*
@@ -87,8 +97,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
-    $('#reader-container').on('click', selectedFlower, function(e) {
-      e.preventDefault();
+    $('#reader-container').on('click', selectedFlower, function() {
       var knownFlower = $(this).text();
       for (var fii = 0; fii < 23; fii++) {
         if (clickTitle.indexOf(knownFlower) == fii) {
