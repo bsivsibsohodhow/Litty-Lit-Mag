@@ -94,10 +94,13 @@ $(document).ready(function() {
   })
 })
 
+/* 
+// grow flower function with dynamic ids
+
 $(document).ready(function() {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
-    $('#reader-container').on('click', '.generated-flower', function() {
+    $('#reader-container').on('click', selectedFlower, function() {
       var knownFlower = $(this).text();
       for (var fii = 0; fii < 23; fii++) {
         if (clickTitle.indexOf(knownFlower) == fii) {
@@ -108,6 +111,14 @@ $(document).ready(function() {
       }
     })
   }
+})
+*/
+
+//without dynamic ids
+$(document).ready(function() {
+  $(document).on('click', '.generated-flower *', function() {
+    //generate flowers
+  })
 })
 
 
