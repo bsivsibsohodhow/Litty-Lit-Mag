@@ -31,6 +31,9 @@ function isStuffInTruck(array, item) {
 var clickTitle = new Array(23);
 var florist = new Array(23);
 
+var linesCommaStorage = new Array(23);
+var linesSpaceStorage = new Array(23);
+
 $(document).ready(function() {
   $.get('/issues/' + issue + '/' + issue + '.txt', function(data) {
     var lines = data.split('\n');
@@ -124,6 +127,7 @@ $(document).ready(function() {
          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
            $('#flower-truck').html(flowers);
          })
+         break;
        }
      }
   })
