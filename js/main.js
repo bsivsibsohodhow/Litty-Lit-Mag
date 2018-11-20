@@ -125,7 +125,10 @@ $(document).ready(function() {
      for (var fii = 0; fii < 23; fii++) {
        if (clickTitle.indexOf(knownFlower) == fii) {
          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
-           $('#flower-truck').html(flowers);
+           var linesFlower = flowers.split('\n');
+           for (var lfi = 0; lfi < linesFlower.length; lfi++) {
+             $('#flower-truck').append(linesFlower[i]);
+           }
          })
          break;
        }
