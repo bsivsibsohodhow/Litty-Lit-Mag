@@ -118,6 +118,14 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(document).on('click', '.generated-flower *', function() {
     //generate flowers
+     var knownFlower = $(this).text();
+     for (var fii = 0; fii < 23; fii++) {
+       if (clickTitle.indexOf(knownFlower) == fii) {
+         $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+           $('#flower-truck').html(flowers);
+         }
+       }
+     }
   })
 })
 
