@@ -123,7 +123,7 @@ $(document).ready(function() {
        if (clickTitle.indexOf(knownFlower) == fii) {
          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
            $('#flower-truck').html(flowers);
-         }
+         })
        }
      }
   })
