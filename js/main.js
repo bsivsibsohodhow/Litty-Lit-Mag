@@ -1,13 +1,14 @@
-/*
+//diff ids
 const template1 = '<div class="col" id="flower';
 const template2 = '"><a href="';
 const template3 = '">';
 const template4 = '</a></div>';
-*/
 
+/*
 const template1 = '<div class="col"><div class="generated-flower"><a href="';
 const template2 = '">';
 const template3 = '</a></div></div>';
+*/
 
 const issue = 'winter18';
 const path= '/issues/' + issue + '/' + issue + '.html';
@@ -78,11 +79,14 @@ $(document).ready(function() {
         }
       }
   */
-      /*  
+      //diff ids
       $('#reader-container').append(template1 + i + template2 + path + template3 + clickTitle[i] + template4);
-      */
-        
+      
+      
+      //same ids
+      /*
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
+      */
     }
     
     /*
