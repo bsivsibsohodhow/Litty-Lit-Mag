@@ -156,6 +156,7 @@ $(document).ready(function() {
               $('#flower-truck').append(linesFlower[lfi]);
             }
           })
+          break;
         }
       }
     })
