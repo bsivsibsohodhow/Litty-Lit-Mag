@@ -117,7 +117,8 @@ $(document).ready(function() {
 })
 */
 
-//without dynamic ids
+//without dynamica ids & line by line
+/*
 $(document).ready(function() {
   $(document).on('click', '.generated-flower *', function() {
     //generate flowers
@@ -135,7 +136,27 @@ $(document).ready(function() {
      }
   })
 })
+*/
 
+//dynamica ids & lines by line
+$(document).ready(function() {
+  for (var fi = 0; fi < 23; fi++) {
+    var selectedFlower = '#flower' + fi;
+    $('#reader-container').on('click', selectedFlower, function() {
+      var knownFlower = $(this).text();
+      for (var fii = 0; fii < 23; fii++) {
+        if (clickTitle.indexOf(knownFlower) == fii) {
+          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+            var linesFlower = flowers.split('\n');
+            for (var lfi = 0; lfi < linesFlower.length; lfi++) {
+              $('#flower-truck').append(linesFlower[lfi]);
+            }
+          })
+        }
+      }
+    })
+  }
+})
 
 /*
 $(document).ready(function() {
