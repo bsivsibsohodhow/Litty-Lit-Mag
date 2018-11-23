@@ -1,1 +1,1 @@
-# Litty-Lit-Mag
+# Litty Lit Mag!
