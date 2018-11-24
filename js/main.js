@@ -218,7 +218,7 @@ function second() {
     return deferred.promise();
 }
 
-$.when(first()).done().then(second);
+first().then(second);
 
 
 
