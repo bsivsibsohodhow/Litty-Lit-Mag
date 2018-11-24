@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 //dynamica ids & lines by line
 
-$(document).ready(function storeFlower() {
+$(document).ready(function storeFlower(callback) {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
     $('#reader-container').on('click', selectedFlower, function() {
@@ -163,7 +163,8 @@ $(document).ready(function storeFlower() {
         }
       }
     })
-  } 
+  }
+  callback('#flower-storage');
 })
 
 /*
@@ -199,7 +200,8 @@ $(document).ready(function() {
 */
 
 $(document).ready(function loadFlowers() {
-        $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
+    storeFlower(function(place) {
+     $('#flower-truck').load('/current.html' + place, function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
             alert('flowers successfully loaded!')
               }
@@ -207,6 +209,7 @@ $(document).ready(function loadFlowers() {
             alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
           }
         })
+    });
  })
 
 
