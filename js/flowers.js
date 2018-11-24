@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function loadFlowers() {
     $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
       if (statusTxt == 'success') {
         alert('flowers successfully loaded!')
@@ -9,3 +9,6 @@ $(document).ready(function() {
     })
 })
 
+$.when().done(function() {
+  loadFlowers();
+})
