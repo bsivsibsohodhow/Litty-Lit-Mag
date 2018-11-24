@@ -153,8 +153,7 @@ $(document).ready(function() {
           $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
             var linesFlower = flowers.split('\n');
             for (var lfi = 0; lfi < linesFlower.length; lfi++) {
-              $('#reader-container').load('/issues/' + issue + '/' + issue + '.html #flower-truck', function() {
-                $('#flower-truck').append(linesFlower[lfi]);
+              $('#flower-storage').append(linesFlower[lfi]);
               })
             }
           })
