@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  $('#hidden-click-btn').click(function() {
-    $('#flower-truck').load('/issues/' + issue + '/' + issue + '.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
+    $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
       if (statusTxt == 'success') {
         alert('flowers successfully loaded!')
           }
@@ -8,9 +7,5 @@ $(document).ready(function() {
         alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
       }
     })
-  })
 })
 
-$(document).ready(function() {
-  $('#hidden-click-btn').click();
-})
