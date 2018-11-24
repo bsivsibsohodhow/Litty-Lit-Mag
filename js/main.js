@@ -142,10 +142,13 @@ $(document).ready(function() {
 })
 */
 
-var deferredObj = $.Deferred();
+
 
 //dynamica ids & lines by line
-$(document).ready(function storeFlowers() {
+
+function first() {
+  let deferred = $.Deferred();
+  setTimeout(function storeFlowers() {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
     $('#reader-container').on('click', selectedFlower, function() {
@@ -162,9 +165,10 @@ $(document).ready(function storeFlowers() {
         }
       }
     })
-  }
-  deferredObj.resolve();
-})
+  } 
+}, 500)
+  return deferred.promise();    
+}
 
 /*
 $(document).ready(function() {
@@ -198,17 +202,23 @@ $(document).ready(function() {
 })
 */
 
-deferredObj.done(function loadFlowers() {
-    $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
-      if (statusTxt == 'success') {
-        alert('flowers successfully loaded!')
+function second() {
+    let deferred = $.Deferred();
+    function loadFlowers() {
+        $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
+          if (statusTxt == 'success') {
+            alert('flowers successfully loaded!')
+              }
+          if (statusTxt == 'error') {
+            alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
           }
-      if (statusTxt == 'error') {
-        alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
-      }
+        })
     })
-})
+    deferred.resolve();
+    return deferred.promise();
+}
 
+$.when(first()).done().then(second);
 
 
 
