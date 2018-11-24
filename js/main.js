@@ -143,7 +143,7 @@ $(document).ready(function() {
 */
 
 //dynamica ids & lines by line
-$(document).ready(function() {
+$(document).ready(function storeFlowers() {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
     $('#reader-container').on('click', selectedFlower, function() {
