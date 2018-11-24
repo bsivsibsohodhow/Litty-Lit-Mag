@@ -199,7 +199,6 @@ $(document).ready(function() {
 */
 
 function second() {
-    let deferred = $.Deferred();
     function loadFlowers() {
         $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
