@@ -1,5 +1,3 @@
-var issue = 'winter18';
-
 $(document).ready(function() {
   $('#flower-truck').load('/issues/' + issue + '/' + issue + '.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
     if (statusTxt == 'success') {
