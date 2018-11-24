@@ -9,6 +9,6 @@ $(document).ready(function loadFlowers() {
     })
 })
 
-$.when().done(function() {
+$.when(storeFlowers()).done(function() {
   loadFlowers();
 })
