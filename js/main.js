@@ -147,8 +147,6 @@ $(document).ready(function() {
 //dynamica ids & lines by line
 
 function first() {
-  let deferred = $.Deferred();
-  setTimeout(function storeFlowers() {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
     $('#reader-container').on('click', selectedFlower, function() {
@@ -166,8 +164,6 @@ function first() {
       }
     })
   } 
-}, 500)
-  return deferred.promise();    
 }
 
 /*
@@ -214,11 +210,8 @@ function second() {
           }
         })
     }
-    deferred.resolve();
-    return deferred.promise();
 }
 
-first().then(second);
 
 
 
