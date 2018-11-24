@@ -199,7 +199,7 @@ $(document).ready(function() {
 })
 */
 
-function loadFlowers() {
+
     storeFlower(function(place) {
      $('#flower-truck').load('/current.html' + place, function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
@@ -210,7 +210,7 @@ function loadFlowers() {
           }
         })
     });
- }
+
 
 
 
