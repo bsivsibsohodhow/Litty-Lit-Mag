@@ -142,6 +142,8 @@ $(document).ready(function() {
 })
 */
 
+var deferredObj = $.Deferred();
+
 //dynamica ids & lines by line
 $(document).ready(function storeFlowers() {
   for (var fi = 0; fi < 23; fi++) {
@@ -161,6 +163,7 @@ $(document).ready(function storeFlowers() {
       }
     })
   }
+  deferredObj.resolve();
 })
 
 /*
@@ -195,7 +198,7 @@ $(document).ready(function() {
 })
 */
 
-$(document).ready(function loadFlowers() {
+deferredObj.done(function loadFlowers() {
     $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
       if (statusTxt == 'success') {
         alert('flowers successfully loaded!')
@@ -206,7 +209,6 @@ $(document).ready(function loadFlowers() {
     })
 })
 
-$.when(storeFlowers()).done(function() {
-  loadFlowers();
-})
+
+
 
