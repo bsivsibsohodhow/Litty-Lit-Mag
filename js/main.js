@@ -164,7 +164,7 @@ $(document).ready(function storeFlower(callback) {
       }
     })
   }
-  callback('#flower-storage');
+ // callback('#flower-storage');
 })
 
 /*
@@ -201,7 +201,7 @@ $(document).ready(function() {
 
 $(document).ajaxComplete(function() {
    // storeFlower(function(place) {
-     $('#flower-truck').load('/current.html' + place, function(responseTxt, statusTxt, jqXHR) {
+     $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
             alert('flowers successfully loaded!')
               }
