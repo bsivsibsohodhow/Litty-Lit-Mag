@@ -195,5 +195,18 @@ $(document).ready(function() {
 })
 */
 
+$(document).ready(function loadFlowers() {
+    $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
+      if (statusTxt == 'success') {
+        alert('flowers successfully loaded!')
+          }
+      if (statusTxt == 'error') {
+        alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
+      }
+    })
+})
 
-//dynamically generate the poem page onclick
+$.when(storeFlowers()).done(function() {
+  loadFlowers();
+})
+
