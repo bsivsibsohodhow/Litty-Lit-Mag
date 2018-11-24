@@ -213,7 +213,7 @@ function second() {
             alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
           }
         })
-    })
+    }
     deferred.resolve();
     return deferred.promise();
 }
