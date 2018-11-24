@@ -154,7 +154,6 @@ $(document).ready(function() {
             var linesFlower = flowers.split('\n');
             for (var lfi = 0; lfi < linesFlower.length; lfi++) {
               $('#flower-storage').append(linesFlower[lfi]);
-              })
             }
           })
           break;
