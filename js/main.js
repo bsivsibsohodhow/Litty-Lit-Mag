@@ -199,8 +199,8 @@ $(document).ready(function() {
 })
 */
 
-
-    storeFlower(function(place) {
+$(document).ajaxComplete(function() {
+   // storeFlower(function(place) {
      $('#flower-truck').load('/current.html' + place, function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
             alert('flowers successfully loaded!')
@@ -209,8 +209,8 @@ $(document).ready(function() {
             alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
           }
         })
-    });
-
+  //  });
+})
 
 
 
