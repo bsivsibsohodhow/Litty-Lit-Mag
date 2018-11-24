@@ -846,6 +846,10 @@ h-ws {
   outline: 0 !important;
 }
 
+#flower-storage {
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
