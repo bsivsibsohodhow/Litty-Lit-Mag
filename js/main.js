@@ -316,5 +316,5 @@ function growFlowers() {
 }
 */
 
-
+var storedFlower = localStorage.getItem('storedFlower');
 
