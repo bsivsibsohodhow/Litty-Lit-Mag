@@ -82,7 +82,13 @@
       window.localStorage.getItem('storedFlower');
       /* console.log(storedFlower); */
       $('#flower-truck').append(storedFlower);
-    };
+    }
+    
+    $(document).ready(function() {
+      $('.col a').click(function() {
+        window.localStorage.clear();
+      })
+    })
   </script>
 </body>
 
