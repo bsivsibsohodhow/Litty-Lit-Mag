@@ -176,7 +176,7 @@ window.setInterval(function() {
       }
      // callback('#flower-storage');
     })   
-}, 1000)
+}, 500)
 
 /*
 if (location.href == '/issues/' + issue + '/' + issue + '.html') {
