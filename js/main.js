@@ -242,6 +242,16 @@ $(document).ready(function () {
                         }
                         complete: function(){
                           //first gain access to flower-truck on another page
+                        
+                          $.ajax({
+                            url: '/issues/' + issue + '/' + issue + '.html',
+                            type: "GET",
+                            success: function(data) {
+                              var pit = $(data).find('#flower-truck').html();
+                              $('#flower-storage').appendTo(pit);
+                            }
+                          })
+                        /*
                           $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
                             if (statusTxt == 'success') {
                               alert('flowers successfully loaded!')
@@ -250,6 +260,7 @@ $(document).ready(function () {
                               alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
                             }
                           })
+                        */
                         },
                         error: function(){
                             //when error occurs then this method will be called.
