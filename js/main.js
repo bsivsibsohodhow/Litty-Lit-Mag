@@ -144,9 +144,8 @@ $(document).ready(function() {
 
 
 
-//dynamica ids & lines by line
-
-/* $(document).ready(function storeFlower(callback) { */
+// get method
+/*
 $(document).ready(function () {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
@@ -199,10 +198,9 @@ $(document).ready(function() {
   })
 })
 */
-
-/* $(document).ajaxComplete(function() { */
+//get method append to issue.html
+/*
 $(document).ready(function() {
-   // storeFlower(function(place) {
      $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
             alert('flowers successfully loaded!')
@@ -211,9 +209,93 @@ $(document).ready(function() {
             alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
           }
         })
-  //  });
+})
+*/
+
+// ajax method
+
+$(document).ready(function () {
+  for (var fi = 0; fi < 23; fi++) {
+    var selectedFlower = '#flower' + fi;
+    $('#reader-container').on('click', selectedFlower, function() {
+      var knownFlower = $(this).text();
+      for (var fii = 0; fii < 23; fii++) {
+        if (clickTitle.indexOf(knownFlower) == fii) {
+            function growFlowers() {
+                try{
+                    jQuery.ajax({
+                        url:'/issues/' + issue + '/' + florist[fii] + '.txt',
+                        dataType: 'text',
+                        data:{
+                            <portlet:namespace  />cmd:'changeLayout'
+                        },
+                        type: "post",
+
+                        beforeSend: function(){
+                            //before send this method will be called
+                        },
+                        success: function(data) {
+                          var linesFlower = data.split('\n');
+                          for (var lfi = 0; lfi < linesFlower.length; lfi++) {
+                            $('#flower-storage').append(linesFlower[lfi]);
+                          }
+                        }
+                        complete: function(){
+                          //first gain access to flower-truck on another page
+                          $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
+                            if (statusTxt == 'success') {
+                              alert('flowers successfully loaded!')
+                            }
+                            if (statusTxt == 'error') {
+                              alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
+                            }
+                          })
+                        },
+                        error: function(){
+                            //when error occurs then this method will be called.
+                        }
+                    });
+                }
+                catch (e) {
+                    alert(e);
+                }
+            }
+        //  break;
+        }
+      }
+    })
+  }
+ // callback('#flower-storage');
 })
 
+/*
+function growFlowers() {
+    try{
+        jQuery.ajax({
+            url:'/issues/' + issue + '/' + issue + '.html',
+            dataType: "text",
+            data:{
+                <portlet:namespace  />cmd:'changeLayout'
+            },
+            type: "post",
 
-
+            beforeSend: function(){
+                //before send this method will be called
+            },
+            success: function(data) {
+                //when response recieved then this method will be called.
+            }
+            complete: function(){
+                //after completed request then this method will be called.
+            },
+            error: function(){
+                //when error occurs then this method will be called.
+            }
+        });
+    }
+    catch (e) {
+        alert(e);
+    }
+}
+*/
 
