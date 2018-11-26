@@ -235,7 +235,7 @@ $(document).ready(function () {
                           for (var lfi = 0; lfi < linesFlower.length; lfi++) {
                             $('#flower-storage').append(linesFlower[lfi]);
                           }
-                        }
+                        },
                         complete: function(){
                           //first gain access to flower-truck on another page
                         
