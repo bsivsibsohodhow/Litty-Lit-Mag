@@ -148,34 +148,35 @@ $(document).ready(function() {
 
 
 // get method
-
-$(document).ready(function () {
-  for (var fi = 0; fi < 23; fi++) {
-    var selectedFlower = '#flower' + fi;
-    $('#reader-container').on('click', selectedFlower, function() {
-      var knownFlower = $(this).text();
-      for (var fii = 0; fii < 23; fii++) {
-        if (clickTitle.indexOf(knownFlower) == fii) {
-          $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
-            if (typeof(Storage) !== 'undefined') {
-              window.localStorage.setItem('storedFlower', flowers);
-            } else {
-              alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
+$(window).load(function() {
+    $(document).ready(function () {
+      for (var fi = 0; fi < 23; fi++) {
+        var selectedFlower = '#flower' + fi;
+        $('#reader-container').on('click', selectedFlower, function() {
+          var knownFlower = $(this).text();
+          for (var fii = 0; fii < 23; fii++) {
+            if (clickTitle.indexOf(knownFlower) == fii) {
+              $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+                if (typeof(Storage) !== 'undefined') {
+                  window.localStorage.setItem('storedFlower', flowers);
+                } else {
+                  alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
+                }
+                /*
+                var linesFlower = flowers.split('\n');
+                for (var lfi = 0; lfi < linesFlower.length; lfi++) {
+                  $('#flower-storage').append(linesFlower[lfi]);
+                }
+                */
+              })
+              break;
             }
-            /*
-            var linesFlower = flowers.split('\n');
-            for (var lfi = 0; lfi < linesFlower.length; lfi++) {
-              $('#flower-storage').append(linesFlower[lfi]);
-            }
-            */
-          })
-          break;
-        }
+          }
+        })
       }
+     // callback('#flower-storage');
     })
-  }
- // callback('#flower-storage');
-})
+})    
 
 /*
 if (location.href == '/issues/' + issue + '/' + issue + '.html') {
