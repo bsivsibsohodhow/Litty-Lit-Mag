@@ -200,7 +200,8 @@ $(document).ready(function() {
 })
 */
 
-$(document).ajaxComplete(function() {
+/* $(document).ajaxComplete(function() { */
+$(document).ready(function() {
    // storeFlower(function(place) {
      $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
