@@ -148,8 +148,8 @@ $(document).ready(function() {
 
 
 // get method
-$(window).load(function() {
-    $(document).ready(function () {
+window.setInterval(function() {
+  $(document).ready(function () {
       for (var fi = 0; fi < 23; fi++) {
         var selectedFlower = '#flower' + fi;
         $('#reader-container').on('click', selectedFlower, function() {
@@ -175,8 +175,8 @@ $(window).load(function() {
         })
       }
      // callback('#flower-storage');
-    })
-})    
+    })   
+}, 1000)
 
 /*
 if (location.href == '/issues/' + issue + '/' + issue + '.html') {
