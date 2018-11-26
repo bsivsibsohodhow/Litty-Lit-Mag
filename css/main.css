@@ -850,6 +850,12 @@ h-ws {
   display: none;
 }
 
+#flower-truck {
+  font-family: "Futura";
+  font-size: 16px;
+  white-space: pre-line;
+}
+
 @media screen and (max-width: 480px) {
     .hide-phone {
         display: none !important;
