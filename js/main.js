@@ -4,6 +4,9 @@ const template2 = '"><a href="';
 const template3 = '">';
 const template4 = '</a></div>';
 
+const hiddenForm1 = '<input type="hidden" name="radio1" value="';
+const hiddenForm2 = '">';
+
 /*
 const template1 = '<div class="col"><div class="generated-flower"><a href="';
 const template2 = '">';
@@ -154,10 +157,13 @@ $(document).ready(function () {
       for (var fii = 0; fii < 23; fii++) {
         if (clickTitle.indexOf(knownFlower) == fii) {
           $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+            localStorage.setItem('storedFlower', flower);
+            /*
             var linesFlower = flowers.split('\n');
             for (var lfi = 0; lfi < linesFlower.length; lfi++) {
               $('#flower-storage').append(linesFlower[lfi]);
             }
+            */
           })
           break;
         }
@@ -200,7 +206,7 @@ $(document).ready(function() {
 */
 
 //get method append to issue.html
-
+/*
 $(document).ready(function() {
      $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
@@ -211,7 +217,7 @@ $(document).ready(function() {
           }
         })
 })
-
+*/
 
 // ajax method
 /*
@@ -298,4 +304,6 @@ function growFlowers() {
     }
 }
 */
+
+
 
