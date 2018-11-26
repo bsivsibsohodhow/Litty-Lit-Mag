@@ -145,7 +145,7 @@ $(document).ready(function() {
 
 
 // get method
-/*
+
 $(document).ready(function () {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
@@ -198,8 +198,9 @@ $(document).ready(function() {
   })
 })
 */
+
 //get method append to issue.html
-/*
+
 $(document).ready(function() {
      $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
@@ -210,10 +211,10 @@ $(document).ready(function() {
           }
         })
 })
-*/
+
 
 // ajax method
-
+/*
 $(document).ready(function () {
   for (var fi = 0; fi < 23; fi++) {
     var selectedFlower = '#flower' + fi;
@@ -247,16 +248,7 @@ $(document).ready(function () {
                               $('#flower-storage').appendTo(pit);
                             }
                           })
-                        /*
-                          $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
-                            if (statusTxt == 'success') {
-                              alert('flowers successfully loaded!')
-                            }
-                            if (statusTxt == 'error') {
-                              alert('Error: ' + jqXHR.status + ' ' + jqXHR.statusTxt)
-                            }
-                          })
-                        */
+                   
                         },
                         error: function(){
                             //when error occurs then this method will be called.
@@ -274,6 +266,7 @@ $(document).ready(function () {
   }
  // callback('#flower-storage');
 })
+*/
 
 /*
 function growFlowers() {
