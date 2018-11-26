@@ -177,6 +177,10 @@ $(document).ready(function () {
  // callback('#flower-storage');
 })
 
+if (location.href == '/issues/' + issue + '/' + issue + '.html') {
+  window.localStorage.getItem('storedFlower');
+  $('#flower-truck').append(storedFlower);
+}
 /*
 $(document).ready(function() {
     for (var ffi = 0; ffi < 23; ffi++) {
