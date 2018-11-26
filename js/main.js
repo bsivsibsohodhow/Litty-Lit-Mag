@@ -154,6 +154,7 @@ $(document).ready(function () {
       for (var fii = 0; fii < 23; fii++) {
         if (clickTitle.indexOf(knownFlower) == fii) {
           $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
+            localStorage.setItem('storedFlower', flowers);
             var linesFlower = flowers.split('\n');
             for (var lfi = 0; lfi < linesFlower.length; lfi++) {
               $('#flower-storage').append(linesFlower[lfi]);
@@ -200,7 +201,7 @@ $(document).ready(function() {
 */
 
 //get method append to issue.html
-
+/*
 $(document).ready(function() {
      $('#flower-truck').load('/current.html #flower-storage', function(responseTxt, statusTxt, jqXHR) {
           if (statusTxt == 'success') {
@@ -211,7 +212,7 @@ $(document).ready(function() {
           }
         })
 })
-
+*/
 
 // ajax method
 /*
