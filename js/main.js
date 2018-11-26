@@ -225,11 +225,7 @@ $(document).ready(function () {
                 try{
                     jQuery.ajax({
                         url:'/issues/' + issue + '/' + florist[fii] + '.txt',
-                        dataType: 'text',
-                        data:{
-                            <portlet:namespace  />cmd:'changeLayout'
-                        },
-                        type: "post",
+                        type: 'POST',
 
                         beforeSend: function(){
                             //before send this method will be called
