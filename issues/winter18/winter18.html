@@ -77,6 +77,10 @@
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   <script src="/js/main.js"></script>
   <script src="/js/flowers.js"></script>
+  <script>
+    localStorage.getItem('storedFlower');
+    $('#flower-truck').append(storedFlower);
+  </script>
 </body>
 
 </html>
