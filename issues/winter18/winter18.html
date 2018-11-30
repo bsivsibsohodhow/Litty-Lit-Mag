@@ -79,14 +79,9 @@
   <script src="/js/flowers.js"></script>
   <script>
     window.onload = function() {
-      while (true) {
-        if (localStorage.storedFlower !== null) {
-          window.localStorage.getItem('storedFlower');
-          /* console.log(storedFlower); */
-          $('#flower-truck').append(storedFlower);  
-          break;
-        }
-      }
+      window.localStorage.getItem('storedFlower');
+      /* console.log(storedFlower); */
+      $('#flower-truck').append(storedFlower);  
     }
     
     $(document).ready(function() {
