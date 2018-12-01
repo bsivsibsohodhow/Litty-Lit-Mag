@@ -156,19 +156,17 @@ window.setInterval(function() {
           var knownFlower = $(this).text();
           for (var fii = 0; fii < 23; fii++) {
             if (clickTitle.indexOf(knownFlower) == fii) {
-              $.get('/issues/' + issue + '/' + florist[fii] + '.txt', function(flowers) {
-                if (typeof(Storage) !== 'undefined') {
-                  window.localStorage.setItem('storedFlower', flowers);
-                } else {
-                  alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
-                }
-                /*
-                var linesFlower = flowers.split('\n');
-                for (var lfi = 0; lfi < linesFlower.length; lfi++) {
-                  $('#flower-storage').append(linesFlower[lfi]);
-                }
-                */
-              })
+                $.ajax({
+                  url: '/issues/' + issue + '/' + florist[fii] + '.txt',
+                  type: 'GET',
+                  success: function(flowers) {
+                    if (typeof(Storage) !== 'undefined') {
+                      window.localStorage.setItem('storedFlower', flowers);
+                    } else {
+                      alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
+                    }
+                  }
+                })
               break;
             }
           }
@@ -177,6 +175,13 @@ window.setInterval(function() {
      // callback('#flower-storage');
     })   
 }, 500)
+
+/*
+                var linesFlower = flowers.split('\n');
+                for (var lfi = 0; lfi < linesFlower.length; lfi++) {
+                  $('#flower-storage').append(linesFlower[lfi]);
+                }
+                */
 
 /*
 if (location.href == '/issues/' + issue + '/' + issue + '.html') {
