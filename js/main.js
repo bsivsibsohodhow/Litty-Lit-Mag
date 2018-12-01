@@ -156,17 +156,21 @@ window.setInterval(function() {
           var knownFlower = $(this).text();
           for (var fii = 0; fii < 23; fii++) {
             if (clickTitle.indexOf(knownFlower) == fii) {
-                $.ajax({
-                  url: '/issues/' + issue + '/' + florist[fii] + '.txt',
-                  type: 'GET',
-                  success: function(flowers) {
-                    if (typeof(Storage) !== 'undefined') {
-                      window.localStorage.setItem('storedFlower', flowers);
-                    } else {
-                      alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
-                    }
-                  }
-                })
+                function growFlowers(callback) {
+                    $.ajax({
+                      url: '/issues/' + issue + '/' + florist[fii] + '.txt',
+                      type: 'GET',
+                      success: callback
+                    })
+                }
+              function flowerCallback(flowers) {
+                if (typeof(Storage) !== 'undefined') {
+                  window.localStorage.setItem('storedFlower', flowers);
+                } else {
+                  alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
+                }
+              }
+              growFlowers(flowerCallback);
               break;
             }
           }
