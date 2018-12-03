@@ -867,4 +867,7 @@ h-ws {
     }
 }
 
+#nav a:hover {
+  background: rgb(186,186,186,0);
+}
 
