@@ -331,5 +331,11 @@ var storedFlower = localStorage.getItem('storedFlower');
 // hover div -> display florist & flower
 $(document).ready(function() {
   var isHovered = $('.grid-box').is(':hover');
+  for (var ih = 0; ih < 23; ih++;) {
+    // access florist array to get florist name
+    if () {
+        
+    }
+  }
 })
 
