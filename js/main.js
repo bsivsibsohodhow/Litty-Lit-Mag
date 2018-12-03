@@ -328,3 +328,8 @@ function growFlowers() {
 
 var storedFlower = localStorage.getItem('storedFlower');
 
+// hover div -> display florist & flower
+$(document).ready(function() {
+  var isHovered = $('.grid-box').is(':hover');
+})
+
