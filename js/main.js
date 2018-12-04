@@ -41,11 +41,11 @@ var linesSpaceStorage = new Array(23);
 $(document).ready(function() {
   $.get('/issues/' + issue + '/' + issue + '.txt', function(data) {
     var lines = data.split('\n');
-    /*
+
     for (j = 0; j < lines.length; j++) {
-      
+      $('hide-flowers').append(lines[j]);
     }
-    */     
+    
     for (var i = 0; i < lines.length; i++) {
 //    var linesComma = lines[i].split(',');
       
@@ -329,13 +329,16 @@ function growFlowers() {
 var storedFlower = localStorage.getItem('storedFlower');
 
 // hover div -> display florist & flower
+
+/*
 $(document).ready(function() {
-  var isHovered = $('.grid-box').is(':hover');
-  for (var ih = 0; ih < 23; ih++;) {
+  for (var ih = 0; ih <6; ih++) {
+    
     // access florist array to get florist name
     if () {
         
     }
   }
 })
+*/
 
