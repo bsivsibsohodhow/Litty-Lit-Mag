@@ -795,6 +795,7 @@ button[disabled]:hover {
   border-width: 1px;
   border-color: #474747;
   border: solid;
+  position: relative;
 }
 
 h-w1 {
@@ -885,4 +886,13 @@ h-ws {
 
 .grid-box a:hover {
   color: #232323;
+}
+
+.link-spanner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
