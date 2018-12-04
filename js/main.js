@@ -93,13 +93,7 @@ $(document).ready(function() {
       */
     }
       
-    $('.grid-box a').click(function(e) {
-          for (var ih = 0; ih < 6; ih++) {
-              if (this.href.indexOf('#' + ih) != -1) {
-                this.href = '/issues/' + issue + '/' + florist[ih] + '.txt';
-              }
-          }
-    })
+   
     
     /*
     function growFlowers() {
@@ -350,4 +344,14 @@ $(document).ready(function() {
   })
 })
 */
+
+$(document).ready(function() {
+ $('.grid-box a').click(function(e) {
+          for (var ih = 0; ih < 6; ih++) {
+              if (this.href.indexOf('#' + ih) != -1) {
+                this.href = '/issues/' + issue + '/' + florist[ih] + '.txt';
+              }
+          }
+    })
+})
 
