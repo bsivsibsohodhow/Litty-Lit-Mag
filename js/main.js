@@ -92,14 +92,16 @@ $(document).ready(function() {
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
       */
     }
-    
-    for (var ih = 0; ih < 6; ih++) {
-      $('a').each(function() {
-          if (this.href.indexOf('#' + ih) != -1) {
-            this.attr('href', '/issues/' + issue + '/' + florist[ih] + '.txt');
+      
+    $('a').each(function() {
+      if (this.is(':hover') == true) {
+          for (var ih = 0; ih < 6; ih++) {
+              if (this.href.indexOf('#' + ih) != -1) {
+                this.attr('href', '/issues/' + issue + '/' + florist[ih] + '.txt');
+              }
           }
-      })
-    }
+      }
+    })
     
     /*
     function growFlowers() {
