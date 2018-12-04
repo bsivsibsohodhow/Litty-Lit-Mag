@@ -882,3 +882,7 @@ h-ws {
   display: block;
   text-decoration: none;
 }
+
+.grid-box a:hover {
+  color: #232323;
+}
