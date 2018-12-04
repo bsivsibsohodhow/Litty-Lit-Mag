@@ -46,6 +46,7 @@ $(document).ready(function() {
       $('hide-flowers').append(lines[j]);
     }
     
+    
     for (var i = 0; i < lines.length; i++) {
 //    var linesComma = lines[i].split(',');
       
@@ -90,6 +91,14 @@ $(document).ready(function() {
       /*
       $('#reader-container').append(template1 + path + template2 + clickTitle[i] + template3);
       */
+    }
+    
+    for (var ih = 0; ih < 6; ih++) {
+      $('a').each(function() {
+          if (this.href.indexOf('#' + ih) != -1) {
+            this.attr('href', '/issues/' + issue + '/' + florist[ih] + '.txt');
+          }
+      })
     }
     
     /*
@@ -332,13 +341,13 @@ var storedFlower = localStorage.getItem('storedFlower');
 
 /*
 $(document).ready(function() {
-  for (var ih = 0; ih <6; ih++) {
-    
-    // access florist array to get florist name
-    if () {
-        
+  $('a').each(function() {
+    for (var ih = 0; ih <6; ih++) {
+        if (this.href.indexOf('#' + ih) != -1) {
+          //display
+        }
     }
-  }
+  })
 })
 */
 
