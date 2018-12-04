@@ -93,14 +93,12 @@ $(document).ready(function() {
       */
     }
       
-    $('a').each(function() {
-      if (this.is(':hover') == true) {
+    $('.grid-box a').click(function(e) {
           for (var ih = 0; ih < 6; ih++) {
               if (this.href.indexOf('#' + ih) != -1) {
-                this.attr('href', '/issues/' + issue + '/' + florist[ih] + '.txt');
+                this.href = '/issues/' + issue + '/' + florist[ih] + '.txt';
               }
           }
-      }
     })
     
     /*
