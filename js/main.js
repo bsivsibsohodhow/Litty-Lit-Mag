@@ -356,7 +356,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
- $('.grid-box a').hover(function(e) {
+ $('.wrapper').hover(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
               if (this.href.indexOf('#' + ihh) != -1) {
                 //show flower & florist name
