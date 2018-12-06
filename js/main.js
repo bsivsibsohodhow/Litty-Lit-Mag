@@ -370,7 +370,7 @@ $(document).ready(function() {
 */
 
 $(document).ready(function() {
-  $('.grid-box a').mouseover(function(e) {
+  $('.grid-box a').mouseenter(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
               if (this.href.indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html(florist[ihh]);
@@ -378,7 +378,7 @@ $(document).ready(function() {
               }
           }
   })
-  $('.grid-box a').mouseout(function(e) {
+  $('.grid-box a').mouseleave(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
               if (this.href.indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html('');
