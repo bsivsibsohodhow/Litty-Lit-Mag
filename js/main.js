@@ -372,7 +372,7 @@ $(document).ready(function() {
 */
 
 $(document).ready(function() {
-  $('wrapper').mouseenter(function(e) {
+  $('.wrapper').mouseenter(function(e) {
 
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
