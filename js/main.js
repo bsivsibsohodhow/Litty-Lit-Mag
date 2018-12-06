@@ -377,7 +377,7 @@ $(document).ready(function() {
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html('<a href="#' + ihh + '"><span class="link-spanner">' + florist[ihh] + '</span></a>');
-                $('.overlay-' + ihh + ' a').attr('href') = '/issues/' + issue + '/' + florist[ihh] + '.txt';
+                $('.overlay-' + ihh + ' a').attr('href', '/issues/' + issue + '/' + florist[ihh] + '.txt');
                 $('.overlay-' + ihh).show();
               }
           }
