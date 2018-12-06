@@ -987,3 +987,11 @@ h-ws {
   background: #f4d5cd;
   opacity: .3;
 }
+
+.grid-box p {
+  font-family: 'Futura';
+  font-size: 40px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
