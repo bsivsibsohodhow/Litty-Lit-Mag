@@ -380,14 +380,14 @@ $(document).ready(function() {
           }
 
   })
-    /*
-  $('.grid-box a').mouseleave(function(e) {
+
+  $('.wrapper').mouseleave(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
-              if (this.href.indexOf('#' + ihh) != -1) {
+              if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html('');
                 $('.overlay-' + ihh).hide();
               }
           }
   })
-  */
+
 })
