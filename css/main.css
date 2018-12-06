@@ -994,4 +994,6 @@ h-ws {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
+  opacity: .5;
+  top: 50%;
 }
