@@ -991,9 +991,8 @@ h-ws {
 .grid-box p {
   font-family: 'Futura';
   font-size: 40px;
-  display: inline-block;
+  display: block;
   text-align: center;
   vertical-align: middle;
-  opacity: .5;
-  top: 50%;
+  opacity: .7;
 }
