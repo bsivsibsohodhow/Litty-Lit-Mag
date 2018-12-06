@@ -370,14 +370,15 @@ $(document).ready(function() {
 */
 
 $(document).ready(function() {
-  $('.grid-box a').mouseenter(function(e) {
+  $('.wrapper').mouseenter(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
-              if (this.href.indexOf('#' + ihh) != -1) {
+              if ($(this).find('a:first').href.indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html(florist[ihh]);
                 $('.overlay-' + ihh).show();
               }
           }
   })
+    /*
   $('.grid-box a').mouseleave(function(e) {
           for (var ihh = 0; ihh < 6; ihh++) {
               if (this.href.indexOf('#' + ihh) != -1) {
@@ -386,4 +387,5 @@ $(document).ready(function() {
               }
           }
   })
+  */
 })
