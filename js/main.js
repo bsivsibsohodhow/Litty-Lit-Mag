@@ -371,8 +371,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.wrapper').mouseenter(function(e) {
-      var myChild = $(this).find('a');
-      alert(myChild.href);
+      alert($(this).find('a').attr('href'));
       /*
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a:first').href.indexOf('#' + ihh) != -1) {
