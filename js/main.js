@@ -404,7 +404,7 @@ $(document).ready(function() {
 
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
-                $('.overlay-' + ihh).html('<a href="#' + ihh + '"><span class="link-spanner">' + overlayTemp1 + florist[ihh] + overlayTemp2 + '</span></a>');
+                $('.overlay-' + ihh).html('<a href="#' + ihh + '"><span class="link-spanner">' + overlayTemp1 + florist[ihh] + '<br>' + linesSpace[ihh] + overlayTemp2 + '</span></a>');
                 $('.overlay-' + ihh + ' a').attr('href', '/issues/' + issue + '/' + issue + '.html');
                   
                 function growFlowers(callback) {
