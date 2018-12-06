@@ -355,12 +355,24 @@ $(document).ready(function() {
     })
 })
 
+/*
 $(document).ready(function() {
  $('.wrapper').hover(function(e) {
      var myChild = $(this).find('grid-box a');
           for (var ihh = 0; ihh < 6; ihh++) {
               if (myChild.href.indexOf('#' + ihh) != -1) {
-                //show flower & florist name
+                $('.overlay-' + ihh).append(florist[ihh]);
+                $('.overlay-' + ihh).show();
+              }
+          }
+    })
+})
+*/
+
+$(document).ready(function() {
+ $('.grid-box a').hover(function(e) {
+          for (var ihh = 0; ihh < 6; ihh++) {
+              if (this.href.indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).append(florist[ihh]);
                 $('.overlay-' + ihh).show();
               }
