@@ -374,6 +374,7 @@ $(document).ready(function() {
 const overlayTemp1 = '<p>';
 const overlayTemp2 = '</p>';
 
+/*
 $(document).ready(function() {
   $('.wrapper').mouseenter(function(e) {
 
@@ -397,3 +398,45 @@ $(document).ready(function() {
   })
 
 })
+*/
+$(document).ready(function() {
+  $('.wrapper').mouseenter(function(e) {
+
+          for (var ihh = 0; ihh < 6; ihh++) {
+              if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
+                $('.overlay-' + ihh).html('<a href="#' + ihh + '"><span class="link-spanner">' + overlayTemp1 + florist[ihh] + overlayTemp2 + '</span></a>');
+                $('.overlay-' + ihh + ' a').attr('href', '/issues/' + issue + '/' + issue + '.html');
+                  
+                function growFlowers(callback) {
+                    $.ajax({
+                      url: '/issues/' + issue + '/' + florist[ihh] + '.txt',
+                      type: 'GET',
+                      success: callback
+                    })
+                }
+              function flowerCallback(flowers) {
+                if (typeof(Storage) !== 'undefined') {
+                  window.localStorage.setItem('storedFlower', flowers);
+                } else {
+                  alert('localStorage is not enabled. pls enable it or I"ll eat all your bananas!');
+                }
+              }
+              growFlowers(flowerCallback);
+                  
+              $('.overlay-' + ihh).show();
+              }
+          }
+
+  })
+
+  $('.wrapper').mouseleave(function(e) {
+          for (var ihh = 0; ihh < 6; ihh++) {
+              if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
+                $('.overlay-' + ihh).html('');
+                $('.overlay-' + ihh).hide();
+              }
+          }
+  })
+
+})
+
