@@ -346,7 +346,7 @@ $(document).ready(function() {
 */
 
 $(document).ready(function() {
- $('.wrapper').find('a').click(function(e) {
+ $('.overlay-0 a, .overlay-1 a, .overlay-2 a, .overlay-3 a, .overlay-4 a, .overlay-5 a').find('a').click(function(e) {
           for (var ih = 0; ih < 6; ih++) {
               if (this.href.indexOf('#' + ih) != -1) {
                 this.href = '/issues/' + issue + '/' + florist[ih] + '.txt';
@@ -370,7 +370,7 @@ $(document).ready(function() {
 */
 
 $(document).ready(function() {
-  $('.wrapper').mouseenter(function(e) {
+  $('wrapper').mouseenter(function(e) {
 
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
