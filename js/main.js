@@ -357,7 +357,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
  $('.wrapper').hover(function() {
-     var myChild = this.find('grid-box a');
+     var myChild = $(this).find('grid-box a');
           for (var ihh = 0; ihh < 6; ihh++) {
               if (myChild.href.indexOf('#' + ihh) != -1) {
                 //show flower & florist name
