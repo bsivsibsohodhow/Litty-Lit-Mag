@@ -345,6 +345,7 @@ $(document).ready(function() {
 })
 */
 
+/*
 $(document).ready(function() {
  $('.overlay-0 a, .overlay-1 a, .overlay-2 a, .overlay-3 a, .overlay-4 a, .overlay-5 a').find('a').click(function(e) {
           for (var ih = 0; ih < 6; ih++) {
@@ -354,6 +355,7 @@ $(document).ready(function() {
           }
     })
 })
+*/
 
 /*
 $(document).ready(function() {
@@ -375,6 +377,7 @@ $(document).ready(function() {
           for (var ihh = 0; ihh < 6; ihh++) {
               if ($(this).find('a').attr('href').indexOf('#' + ihh) != -1) {
                 $('.overlay-' + ihh).html('<a href="#' + ihh + '"><span class="link-spanner">' + florist[ihh] + '</span></a>');
+                $('.overlay-' + ihh + ' a').attr('href') = '/issues/' + issue + '/' + florist[ihh] + '.txt';
                 $('.overlay-' + ihh).show();
               }
           }
