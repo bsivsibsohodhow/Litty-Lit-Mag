@@ -85,7 +85,7 @@ $(document).ready(function() {
       }
   */
       //diff ids
-      $('#reader-container').append(template1 + i + template2 + path + template3 + clickTitle[i] + template4);
+      $('#reader-container').append(template1 + i + template2 + path + template3 + clickTitle[i] + '//' + florist[i] + template4);
       
       
       //same ids
