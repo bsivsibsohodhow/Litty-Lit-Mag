@@ -442,7 +442,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-  $('#heading-logo').mousenter(function() {
+  $('#heading-logo').mouseenter(function() {
     $(this).wrap('<a href="littylitmag.netlify.com"></a>');
   });
 })
