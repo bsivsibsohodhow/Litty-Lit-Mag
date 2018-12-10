@@ -441,3 +441,9 @@ $(document).ready(function() {
 
 })
 
+$(document).ready(function() {
+  $('#heading-logo').mousenter(function() {
+    $(this).wrap('<a href="littylitmag.netlify.com"></a>');
+  });
+})
+
