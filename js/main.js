@@ -449,3 +449,12 @@ $(document).ready(function() {
 })
 */
 
+$(document).ready(function() {
+  $('#heading-logo').mouseenter(function() {
+    $(this).attr('style', 'background: rgb(255, 255, 255, .3);');
+  })
+  $('#heading-logo').mouseleave(function() {
+    $(this).attr('style', 'background: rgb(186, 186, 186, .3);');
+  })
+})
+
