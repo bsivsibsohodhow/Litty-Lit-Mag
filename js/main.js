@@ -443,7 +443,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#heading-logo').mouseenter(function() {
-    $(this).wrap('<a href="www.littylitmag.netlify.com"></a>');
+    $(this).wrap('<a href="https"//www.littylitmag.netlify.com" style="height: 100%; width: 100%"></a>');
   });
 })
 
