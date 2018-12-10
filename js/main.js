@@ -451,10 +451,10 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#heading-logo').mouseenter(function() {
-    $(this).attr('style', 'background: rgb(255, 255, 255, .3);');
+    $(this).attr('style', 'background: rgb(255, 255, 255, .3); margin-bottom: 0; margin-right: 0;');
   })
   $('#heading-logo').mouseleave(function() {
-    $(this).attr('style', 'background: rgb(186, 186, 186, .3);');
+    $(this).attr('style', 'background: rgb(186, 186, 186, .3); margin-bottom: 0; margin-right: 0;');
   })
 })
 
