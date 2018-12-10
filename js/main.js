@@ -441,9 +441,11 @@ $(document).ready(function() {
 
 })
 
+/*
 $(document).ready(function() {
   $('#heading-logo').mouseenter(function() {
     $(this).wrap('<a href="/index.html" style="all: inherit"></a>');
   });
 })
+*/
 
