@@ -190,6 +190,7 @@ iframe {
             justify-content: flex-start;
     margin-left: calc(var(--grid-gutter) / -2);
     margin-right: calc(var(--grid-gutter) / -2);
+    padding: 16px;
 }
 .col {
     -webkit-box-flex: 1;
